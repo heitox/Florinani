@@ -11,7 +11,7 @@ $materiais_base = [
     [
        'id' => 1,
         'nome' => 'Cimento',
-        'preco' => 35.90,
+        'preco' =>  35.90,
         'categoria' => 'bruto',
         'descricao_curta' => 'Cimento Florinani 50kg.',
         'descricao' => 'O Cimento Todas as Obras 50kg Votoran é um produto de alta qualidade e versatilidade, adequado para diversas aplicações na construção civil. Pertencente à classe de cimentos comuns, ele é um tipo de cimento Portland utilizado em diversas etapas da construção.',
@@ -60,6 +60,6 @@ $materiais_base = [
         'categoria' => 'acabamentos',
         'descricao_curta' => 'Torneira Florinani bica móvel 1/4 volta ref.1156550',
         'descricao' => ' A torneira Florinani bica móvel parede Iguatemi ref. 1156550 de 1/4 de volta Iguatemi possui bico articulado c/arejador e excelente acabamento, seu sistema 1/4 de volta proporciona uma maior vida útil ao produto..',
-        'imagem' => 'IMG/Torneira-florinani',
+        'imagem' => 'IMG/Torneira-florinani.png',
     ],
 ];

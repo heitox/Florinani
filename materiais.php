@@ -2,6 +2,7 @@
 require_once 'init.php';
 
 $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
+<<<<<<< HEAD
 // print '<pre>';
 // print_r($categorias);
 // print_r($_SESSION['materiais']);
@@ -10,6 +11,8 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 //   print $_GET['categoria'];
 //  }
 
+=======
+>>>>>>> 16ef7156b478c3b84d349357c0a64a09e66a82ac
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -49,7 +52,11 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
           <h3>'.$materiais['nome'].'</h3>
           <p class="card__categoria">'.$materiais['categoria'].'</p>
           <p class="card__preco">'.$materiais['preco'].'</p>
+<<<<<<< HEAD
           <a href="materiais-detalhe.php">Ver detalhes</a>
+=======
+         <a href="materiais-detalhe.">Ver detalhes</a>
+>>>>>>> 16ef7156b478c3b84d349357c0a64a09e66a82ac
         </div>
       </article>';
       }

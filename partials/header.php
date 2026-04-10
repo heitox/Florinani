@@ -5,7 +5,7 @@
         <ul>
           <li><a href="index.php">Início</a></li>
           <li><a href="materiais.php">Materiais</a></li>
-          <li><a href="cadastro-material.php">Cadastro de Material</a></li>
+          <li><a href="cadastro-materiais.php">Cadastro de Material</a></li>
           <li><a href="contato.php">Contato</a></li>
         </ul>
       </nav>
