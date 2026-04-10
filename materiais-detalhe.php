@@ -17,7 +17,7 @@ include 'init.php';
   <main class="site-main">
     <p><a href="produtos.php">Voltar aos produtos</a></p>
     <article class="detalhe-produto">
-      <img src="https://picsum.photos/seed/detalhe/800/400" alt="">
+      <img src="IMG/Cimento.png" alt="">
       <div class="detalhe-produto__body">
         <h1 class="secao-titulo" style="margin-top:0">Nome do produto (exemplo)</h1>
         <p><strong>Preço:</strong> R$ 0,00</p>

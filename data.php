@@ -3,11 +3,11 @@ $nomeLoja = "ConstruTech";
 
 $categorias = [
     'bruto' => 'Bruto',
-    'ferramenta' => 'Ferramentas',
-    'acabamento' => 'Acabamentos',
+    'ferramentas' => 'Ferramentas',
+    'acabamentos' => 'Acabamentos',
 ];
 
-$produtos_base = [
+$materiais_base = [
     [
        'id' => 1,
         'nome' => 'Cimento',
@@ -20,7 +20,7 @@ $produtos_base = [
     [
         'id' => 2,
         'nome' => 'Areia',
-        'preco' => 8.99,
+        'preco' => 'R$ 8.99',
         'categoria' => 'bruto',
         'descricao_curta' => 'Areia Florinani 20kg.',
         'descricao' => 'A areia grossa é a mais utilizada, pois sua estrutura permite que seja usada em praticamente todas as fases da obra.',

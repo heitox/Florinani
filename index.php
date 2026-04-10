@@ -16,19 +16,25 @@ require_once 'init.php';
 
   <main class="site-main">
     <section class="hero" aria-labelledby="titulo-hero">
-      <h1 id="titulo-hero">Bem-vindo à Livraria do Rodrigo</h1>
-      <p>Conteúdo estático em HTML e CSS. Na próxima etapa usamos PHP para reaproveitar cabeçalho, rodapé e dados.</p>
+      <h1 id="titulo-hero">Bem-vindo à ConstruTech</h1>
+      <p>Vendemos materiais de construção de qualidade.</p>
     </section>
 
     <section aria-labelledby="titulo-mais-vendidos">
-      <h2 id="titulo-mais-vendidos" class="secao-titulo">Produtos mais vendidos</h2>
+      <h2 id="titulo-mais-vendidos" class="secao-titulo">Materiais mais vendidos</h2>
       <div class="cards-grid">
         <article class="card">
-          <img class="card__img" src="https://picsum.photos/seed/notebook/400/200" alt="">
+          <img class="card__img" src="IMG/Cimento-florinani.png" alt="">
           <div class="card__body">
-            <h3>Notebook Estudo</h3>
-            <p>Ideal para aulas e projetos.</p>
-            <p class="card__preco">R$ 2.499,00</p>
+            <?php
+            foreach ($materiais_base as $materiais) {
+              if ($materiais['nome'] == "Cimento") {
+              print "<h3>{$materiais['nome']}</h3>";
+              print "<p>{$materiais['descricao_curta']}";
+              print "<p class='card__preco'>R$ " . $materiais['preco'] . "</p>";
+                }
+              }
+              ?>
           </div>
         </article>
         <article class="card">
