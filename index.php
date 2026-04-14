@@ -38,23 +38,31 @@ require_once 'init.php';
           </div>
         </article>
         <article class="card">
-          <img class="card__img" src="https://picsum.photos/seed/mouse/400/200" alt="">
+
+          <img class="card__img" src="IMG/Martelo-florinani.png" alt="">
           <div class="card__body">
-            <h3>Mouse sem fio</h3>
-            <p>Conforto para o dia a dia.</p>
-            <p class="card__preco">R$ 89,90</p>
-          </div>
+             <?php
+            foreach ($materiais_base as $materiais) {
+              if ($materiais['nome'] == "Martelo") {
+              print "<h3>{$materiais['nome']}</h3>";
+              print "<p>{$materiais['descricao_curta']}";
+              print "<p class='card__preco'>R$ " . $materiais['preco'] . "</p>";
+                }
+              }
+              ?>
         </article>
         <article class="card">
-          <img class="card__img" src="https://picsum.photos/seed/teclado/400/200" alt="">
+          <img class="card__img" src="IMG/Piso-florinani.png" alt="">
           <div class="card__body">
-            <h3>Teclado mecânico</h3>
-            <p>Digitação precisa e durável.</p>
-            <p class="card__preco">R$ 349,00</p>
-          </div>
-        </article>
-      </div>
-    </section>
+             <?php
+            foreach ($materiais_base as $materiais) {
+              if ($materiais['nome'] == "Piso") {
+              print "<h3>{$materiais['nome']}</h3>";
+              print "<p>{$materiais['descricao_curta']}";
+              print "<p class='card__preco'>R$ " . $materiais['preco'] . "</p>";
+                }
+              }
+              ?>
 
     <section aria-labelledby="titulo-contato">
       <h2 id="titulo-contato" class="secao-titulo">Fale conosco</h2>

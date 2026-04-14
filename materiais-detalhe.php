@@ -6,11 +6,13 @@ include 'init.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
   <title>Detalhe do produto - <?php print $nomeLoja; ?></title>
-=======
+
+  <title>Detalhe do produto - <?php print $nomeLoja; ?></title>
+
   <title>Detalhe do Material - <?php print $nomeLoja; ?></title>
->>>>>>> 16ef7156b478c3b84d349357c0a64a09e66a82ac
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,7 +20,7 @@ include 'init.php';
   require_once 'partials/header.php';
   ?>
 
-<<<<<<< HEAD
+
   <main class="site-main">
     <p><a href="produtos.php">Voltar aos produtos</a></p>
     <article class="detalhe-produto">
@@ -31,44 +33,6 @@ include 'init.php';
       </div>
     </article>
   </main>
-=======
- <main class="site-main">
-  <p><a href="materiais.php">Voltar aos Materiais</a></p>
-
-  <?php if ($materiais): ?>
-    <article class="detalhe-materiais__body">
-
-      <img src="<?php $materiais['imagem'] ?>" alt="">
-
-      <div class="detalhe-materiais__info">
-        <h1 class="secao-titulo" style="margin-top:0">
-          <?php $materiais['nome'] ?>
-        </h1>
-
-          <p>
-          <strong>Id:</strong> 
-         <?php echo '$materiais['id']' ?>
-        </p>
-
-        <p>
-          <strong>Preço:</strong> 
-          R$ <?php number_format($materiais['preco'], 2, ',', '.') ?>
-        </p>
-
-        <p>
-          <strong>Categoria:</strong> 
-          <?php $categorias[$materiais['categoria']] ?>
-        </p>
-
-        <p><?php $materiais['descricao'] ?></p>
-      </div>
-
-    </article>
-  <?php  else :?>
-    <p>Material não encontrado.</p>
-  <?php endif;  ?>
-</main>
->>>>>>> 16ef7156b478c3b84d349357c0a64a09e66a82ac
 
   <?php 
   require_once 'partials/footer.php';
