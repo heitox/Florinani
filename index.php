@@ -38,6 +38,7 @@ require_once 'init.php';
           </div>
         </article>
         <article class="card">
+
           <img class="card__img" src="IMG/Martelo-florinani.png" alt="">
           <div class="card__body">
              <?php
@@ -62,9 +63,6 @@ require_once 'init.php';
                 }
               }
               ?>
-        </article>
-      </div>
-    </section>
 
     <section aria-labelledby="titulo-contato">
       <h2 id="titulo-contato" class="secao-titulo">Fale conosco</h2>

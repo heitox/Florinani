@@ -6,13 +6,20 @@ include 'init.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Detalhe do produto - <?php print $nomeLoja; ?></title>
+
+  <title>Detalhe do produto - <?php print $nomeLoja; ?></title>
+
+  <title>Detalhe do Material - <?php print $nomeLoja; ?></title>
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <?php 
   require_once 'partials/header.php';
   ?>
+
 
   <main class="site-main">
     <p><a href="produtos.php">Voltar aos produtos</a></p>
