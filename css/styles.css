@@ -2,8 +2,8 @@
 :root {
   --cor-fundo: #f4f6f8;
   --cor-texto: #1a1a2e;
-  --cor-primaria: #4361ee;
-  --cor-primaria-escura: #3a56d4;
+  --cor-primaria: #2F5D8C;
+  --cor-primaria-escura: #1E3A5F;
   --cor-card: #ffffff;
   --cor-borda: #e0e4eb;
   --sombra: 0 4px 14px rgba(26, 26, 46, 0.08);
@@ -16,11 +16,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--cor-texto);
-  background: var(--cor-fundo);
+  background: linear-gradient(155deg, var(--cor-primaria) 0%, #000000 100%);
   line-height: 1.5;
   min-height: 100vh;
   display: flex;
@@ -28,7 +32,7 @@ body {
 }
 
 a {
-  color: var(--cor-primaria);
+  color: var(--cor-card);
   text-decoration: none;
 }
 
@@ -38,8 +42,7 @@ a:hover {
 
 /* Header */
 .site-header {
-  background: var(--cor-card);
-  border-bottom: 1px solid var(--cor-borda);
+  color: #FFFFFF;
   box-shadow: var(--sombra);
 }
 
@@ -77,7 +80,7 @@ a:hover {
 }
 
 .nav-principal a {
-  color: var(--cor-texto);
+  color: var(--cor-card);
   font-weight: 500;
 }
 
@@ -96,7 +99,7 @@ a:hover {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--cor-primaria) 0%, #7209b7 100%);
+  background: linear-gradient(135deg, var(--cor-primaria) 0%, #1E3A5F 100%);
   color: #fff;
   padding: 3rem 1.5rem;
   border-radius: 12px;
@@ -192,6 +195,20 @@ main > h2.secao-titulo--categoria:first-of-type {
   margin-top: auto;
 }
 
+/* form contato */
+.contato {
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+  padding: 1.5rem;
+  padding-left: 40rem;
+}
+
+.secao-titulo {
+  font-size: 1.8rem;
+  text-align: left;
+  color: var(--cor-card);
+}
+
 /* Formulários */
 .formulario {
   background: var(--cor-card);
@@ -199,7 +216,9 @@ main > h2.secao-titulo--categoria:first-of-type {
   border-radius: 10px;
   border: 1px solid var(--cor-borda);
   box-shadow: var(--sombra);
-  max-width: 520px;
+  max-width: 600px;
+  text-align: left;
+  align-items: center;
 }
 
 .formulario label {

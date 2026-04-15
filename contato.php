@@ -16,7 +16,6 @@ require_once 'init.php';
 
   <main class="site-main">
     <h1 class="secao-titulo">Contato</h1>
-    <p>O mesmo formulário pode existir na página inicial. Aqui é uma página dedicada (estática).</p>
 
     <form class="formulario" action="#" method="get">
       <label for="nome">Nome</label>

@@ -63,8 +63,10 @@ require_once 'init.php';
                 }
               }
               ?>
+    
 
-    <section aria-labelledby="titulo-contato">
+  </main>
+    <section aria-labelledby="titulo-contato" class="contato">
       <h2 id="titulo-contato" class="secao-titulo">Fale conosco</h2>
       <form class="formulario" action="processa-contato.php" method="get">
         <label for="nome">Nome</label>
@@ -79,7 +81,6 @@ require_once 'init.php';
         <button type="submit" class="btn">Enviar</button>
       </form>
     </section>
-  </main>
 
   <?php 
   require_once 'partials/footer.php';

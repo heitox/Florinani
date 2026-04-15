@@ -20,3 +20,5 @@ if ($id !== null && isset($_SESSION['materiais'][$id])) {
     // Caso contrário, $materiais fica falso e cai no seu "Material não encontrado"
     $materiais = false;
 }
+
+session_destroy();

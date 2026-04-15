@@ -33,7 +33,6 @@ $_SESSION['materiais'][] = [
 
   <main class="site-main">
     <h1 class="secao-titulo">Cadastro de Material</h1>
-    <p><strong>Imagem:</strong> informe apenas o <em>caminho ou URL</em> do arquivo (sem upload real nesta atividade).</p>
 
     <form class="formulario" action="cadastro-materiais.php" method="post">
       <label for="nome">Nome do Material</label>
@@ -41,6 +40,10 @@ $_SESSION['materiais'][] = [
 
       <label for="preco">Preço (ex.: 120,50)</label>
       <input type="text" id="preco" name="preco" required>
+
+      <label for="quantidade">Quantidade</label>
+      <input type="number" id="quantidade" name="quantidade" min="0" required>
+
 
       <label for="categoria">Categoria</label>
       <select id="categoria" name="categoria" required>
