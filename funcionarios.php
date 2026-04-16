@@ -1,6 +1,22 @@
 <?php
 require_once 'init.php';
 
+if (isset($_GET['excluir'])) {
+    $idExcluir = $_GET['excluir'];
+
+    foreach ($_SESSION['materiais'] as $key => $material) {
+        if ($material['id'] == $idExcluir) {
+            unset($_SESSION['materiais'][$key]);
+        }
+    }
+
+    // Reorganiza o array
+    $_SESSION['materiais'] = array_values($_SESSION['materiais']);
+
+    header("Location: funcionarios.php");
+    exit;
+}
+
 // var_dump($_SESSION['materiais']);
 ?>
 
@@ -33,14 +49,32 @@ require_once 'init.php';
                         <?php var_dump($_SESSION['materiais']); ?>
                     </pre> -->
                     <?php foreach ($_SESSION['materiais'] as $material): ?>
+                    <?php $estoque = $material['estoque'] ?? 0; ?>
                     <tr>
                         <td><?php echo $material['id']; ?></td>
                         <td><?php echo $material['nome']; ?></td>
                         <td><?php echo $material['descricao']; ?></td>
                         <td>R$ <?php echo $material['preco']; ?></td>
-                        <td><?php echo $material['estoque'] ?? 0; ?></td>                            
-                        <td><button class="btn">Editar</button></td>
-                        <td><button class="btn">Excluir</button></td>
+
+                        <?php if ($estoque >= 100): ?>
+                            <td><?php echo $estoque; ?> 🟢</td>
+                        <?php elseif ($estoque >= 50): ?>
+                            <td><?php echo $estoque; ?> 🟡</td>
+                        <?php else: ?>
+                            <td><?php echo $estoque; ?> 🔴</td>
+                        <?php endif; ?>
+
+                        <td>
+                            <a href="funcionarios.php?editar=<?php echo $material['id']; ?>">
+                            <button class="btn">Editar</button>
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="funcionarios.php?excluir=<?php echo $material['id']; ?>">
+                            <button class="btn">Excluir</button>
+                            </a>
+                        </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

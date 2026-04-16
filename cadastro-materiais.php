@@ -10,6 +10,7 @@ $_SESSION['materiais'][] = [
          'id' => $novoId,
         'nome' => $_POST['nome'],
         'preco' => $_POST['preco'],
+        'estoque' => $_POST['quantidade'],
         'categoria' => $_POST['categoria'],
         'descricao' => $_POST['descricao'],
         'imagem' => $_POST['imagem']

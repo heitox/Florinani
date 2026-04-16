@@ -60,7 +60,7 @@ a:hover {
 .logo {
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--cor-texto);
+  color: var(--cor-card);
   max-width: 12rem;
   line-height: 1.25;
 }

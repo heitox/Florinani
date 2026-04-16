@@ -22,16 +22,19 @@ include 'init.php';
 
 
   <main class="site-main">
+    <?php foreach ($_SESSION['materiais'] as $material) : ?>
     <p><a href="produtos.php">Voltar aos produtos</a></p>
     <article class="detalhe-produto">
-      <img src="IMG/Cimento.png" alt="">
+      <img src="IMG/Cimento-florinani.png" alt="">
       <div class="detalhe-produto__body">
-        <h1 class="secao-titulo" style="margin-top:0">Nome do produto (exemplo)</h1>
-        <p><strong>Preço:</strong> R$ 0,00</p>
-        <p><strong>Categoria:</strong> Informática</p>
-        <p>Esta é uma página de detalhe única usada como modelo. No projeto PHP, o mesmo arquivo receberá o id pela URL e mostrará os dados do array.</p>
+        <h1 class="secao-titulo" style="margin-top:0"><?php echo $material['nome']; ?></h1>
+        <p><strong>Preço:</strong> R$ <?php echo $material['preco']; ?></p>
+        <p><strong>Categoria:</strong> <?php echo $material['categoria']; ?></p>
+        <p><?php echo $material['descricao']; ?></p>
       </div>
     </article>
+    <?php endforeach; ?>
+
   </main>
 
   <?php 
