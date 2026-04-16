@@ -1,5 +1,5 @@
 <?php
-$nomeLoja = "ConstruTech";
+$nomeLoja = "ConstruTech" ;
 
 $categorias = [
     'bruto' => 'Bruto',
