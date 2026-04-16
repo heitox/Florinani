@@ -2,8 +2,8 @@
 :root {
   --cor-fundo: #f4f6f8;
   --cor-texto: #1a1a2e;
-  --cor-primaria: #2F5D8C;
-  --cor-primaria-escura: #1E3A5F;
+  --cor-primaria: #5e5858;
+  --cor-primaria-escura: #283a75;
   --cor-card: #ffffff;
   --cor-borda: #e0e4eb;
   --sombra: 0 4px 14px rgba(26, 26, 46, 0.08);
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--cor-texto);
-  background: linear-gradient(155deg, var(--cor-primaria) 0%, #000000 100%);
+  background: linear-gradient(37deg, var(--cor-primaria) 0%, #000000 100%);
   line-height: 1.5;
   min-height: 100vh;
   display: flex;
@@ -64,6 +64,7 @@ a:hover {
   max-width: 12rem;
   line-height: 1.25;
 }
+
 
 .logo:hover {
   text-decoration: none;
@@ -187,6 +188,12 @@ main > h2.secao-titulo--categoria:first-of-type {
 .card__body h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
+}
+
+.card__body a {
+  background-color: #1E3A5F;
+  border-radius: 13px;
+  padding: 4px;
 }
 
 .card__preco {

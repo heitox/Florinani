@@ -38,7 +38,7 @@ require_once 'init.php';
                         <td><?php echo $material['nome']; ?></td>
                         <td><?php echo $material['descricao']; ?></td>
                         <td>R$ <?php echo $material['preco']; ?></td>
-                        <td><?php echo $material['estoque'] ?? 0; ?></td>                            
+                        <td><?php echo $material['estoque'] ?? 0; ?></td>
                         <td><button class="btn">Editar</button></td>
                         <td><button class="btn">Excluir</button></td>
                     </tr>
