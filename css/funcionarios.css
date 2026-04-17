@@ -23,10 +23,11 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--cor-texto);
-  background: linear-gradient(155deg, var(--cor-primaria) 0%, #000000 100%);
+  background: linear-gradient(37deg, #5e5858 0%, #000000 100%);
   line-height: 1.5;
   min-height: 100vh;
   display: flex;
+  transition: 0.2s linear;
   flex-direction: column;
 }
 
@@ -83,7 +84,7 @@ a:hover {
 }
 
 .nav-principal a:hover {
-  color: var(--cor-texto);
+  color: var(--cor-primaria);
 }
 
 .secao-titulo {
@@ -94,6 +95,19 @@ a:hover {
 }
 
 /* table */
+
+td.estoque-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza */
+    gap: 8px;
+    white-space: nowrap; /* evita quebrar linha */
+}
+
+td:nth-child(4) {
+    white-space: nowrap;
+    text-align: center;
+}
 
 .tabela-materiais h2 {
   text-align: center;
@@ -140,6 +154,25 @@ a:hover {
 }
 
 /* Main */
+.btn {
+  border-radius: 10px;
+  background-color: var(--cor-primaria-escura);
+  color: var(--cor-borda);
+}
+
+.btn:hover {
+  background-color: var(--cor-borda);
+  color: var(--cor-primaria-escura);  
+  letter-spacing: 0.1rem  ;
+}
+
+.descricao {
+    max-width: 478px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .site-main {
   flex: 1;
   max-width: var(--max-largura);
@@ -148,4 +181,91 @@ a:hover {
   padding: 2rem 1.25rem;
 }
 
+.estoque-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.estoque-valor {
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+}
+
+.btn-mais, .btn-menos {
+    border: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-mais {
+    background-color: #22c55e;
+    color: white;
+}
+
+.btn-mais:hover {
+    background-color: #16a34a;
+}
+
+.btn-menos {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-menos:hover {
+    background-color: #dc2626;
+}
+
+.btn-editar, .btn-excluir {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+
+.btn-editar {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: var(--cor-primaria-escura);
+    transform: scale(1.05);
+}
+
+.btn-excluir {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #dc2626;
+    transform: scale(1.05);
+}
+
+.btn-editar:active,
+.btn-excluir:active {
+    transform: scale(0.95);
+}
+
+.preco {
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+}
+
+.total {
+    background-color: #f1f5f9;
+    font-weight: bold;
+}
+
+.total td {
+    padding: 10px;
+}

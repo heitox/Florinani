@@ -21,7 +21,7 @@ $materiais_base = [
     [
         'id' => 2,
         'nome' => 'Areia',
-        'preco' => 'R$ 8.99',
+        'preco' =>  8.99,
         'estoque' => 200,
         'categoria' => 'bruto',
         'descricao_curta' => 'Areia Florinani 20kg.',

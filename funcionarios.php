@@ -17,6 +17,36 @@ if (isset($_GET['excluir'])) {
     exit;
 }
 
+// BOTOES MAIS E MENOS
+if (isset($_GET['mais'])) {
+    $id = $_GET['mais'];
+
+    foreach ($_SESSION['materiais'] as &$material) {
+        if ($material['id'] == $id) {
+            $material['estoque'] = ($material['estoque'] ?? 0) + 1;
+        }
+    }
+    unset($material);
+
+    header("Location: funcionarios.php");
+    exit;
+}
+
+if (isset($_GET['menos'])) {
+    $id = $_GET['menos'];
+
+    foreach ($_SESSION['materiais'] as &$material) {
+        if ($material['id'] == $id) {
+            if (($material['estoque'] ?? 0) > 0) {
+                $material['estoque']--;
+            }
+        }
+    }
+
+    header("Location: funcionarios.php");
+    exit;
+}
+
 // var_dump($_SESSION['materiais']);
 ?>
 
@@ -48,35 +78,71 @@ if (isset($_GET['excluir'])) {
                     <!-- <pre> ver se os dados estão chegando aqui  
                         <?php var_dump($_SESSION['materiais']); ?>
                     </pre> -->
+
+                    <?php 
+                    $totalEstoque = 0;
+                    $totalValor = 0;
+                    ?>
                     <?php foreach ($_SESSION['materiais'] as $material): ?>
                     <?php $estoque = $material['estoque'] ?? 0; ?>
+                    <?php $totalEstoque += $estoque; ?>
+                    <?php $totalValor += ($material['preco'] * $estoque); ?>
+
                     <tr>
                         <td><?php echo $material['id']; ?></td>
                         <td><?php echo $material['nome']; ?></td>
-                        <td><?php echo $material['descricao']; ?></td>
-                        <td>R$ <?php echo $material['preco']; ?></td>
+                        <td class="descricao"><?php echo $material['descricao']; ?></td>
+                        <td class="preco">R$ <?php echo number_format($material['preco'], 2, ',', '.'); ?></td>     
 
-                        <?php if ($estoque >= 100): ?>
-                            <td><?php echo $estoque; ?> 🟢</td>
-                        <?php elseif ($estoque >= 50): ?>
-                            <td><?php echo $estoque; ?> 🟡</td>
-                        <?php else: ?>
-                            <td><?php echo $estoque; ?> 🔴</td>
-                        <?php endif; ?>
+                            <td class="estoque-container">
+                                <a href="funcionarios.php?menos=<?php echo $material['id']; ?>">
+                                    <button class="btn-menos">-</button>
+                                </a>
+
+                            <span class="estoque-valor">
+                                <?php if ($estoque >= 100): ?>
+                                    <?php echo $estoque; ?> 🟢
+                                <?php elseif ($estoque >= 50): ?>
+                                    <?php echo $estoque; ?> 🟡
+                                <?php else: ?>
+                                    <?php echo $estoque; ?> 🔴
+                                <?php endif; ?>
+                            </span>
+
+                                <a href="funcionarios.php?mais=<?php echo $material['id']; ?>">
+                                    <button class="btn-mais">+</button>
+                                </a>
+                        </td>
 
                         <td>
                             <a href="funcionarios.php?editar=<?php echo $material['id']; ?>">
-                            <button class="btn">Editar</button>
+                                <button class="btn-editar">Editar</button>
                             </a>
                         </td>
 
                         <td>
                             <a href="funcionarios.php?excluir=<?php echo $material['id']; ?>">
-                            <button class="btn">Excluir</button>
+                                <button class="btn-excluir">Excluir</button>
                             </a>
                         </td>
-                    </tr>
+
+                    </tr>  
+
                     <?php endforeach; ?>
+
+                    <tr class="total">
+                        <td colspan="4"><strong>Total:</strong></td>
+
+                        <td>
+                            <strong><?php echo $totalEstoque; ?> unidades</strong>
+                        </td>
+
+                        <td class="preco" colspan="2">
+                            <strong>
+                            <?php echo "R$ " . number_format($totalValor, 2, ',', '.'); ?>
+                            </strong>
+                        </td>
+                    </tr>   
                 </tbody>
             </table>
         </section>

@@ -21,4 +21,3 @@ if ($id !== null && isset($_SESSION['materiais'][$id])) {
     $materiais = false;
 }
 
-session_destroy();
