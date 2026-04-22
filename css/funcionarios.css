@@ -113,13 +113,13 @@ td:nth-child(4) {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  color: var(--cor-fundo);
+  color: var(--cor-borda);
 }
 
 .tabela-materiais {
   width: 100%;
   margin-top: 1.5rem;
-  background-color: #e0e4eb;
+  background-color: #565657;
   border-radius: 10px;
 }
 
@@ -127,7 +127,7 @@ td:nth-child(4) {
 .tabela-materiais td {
   padding: 0.75rem;
   text-align: left;
-  color: #fff;
+  color: var(--cor-borda);
 }
 
 .tabela-materiais th {
@@ -147,10 +147,10 @@ td:nth-child(4) {
 }
 
 .tabela-materiais td {
-  background-color: #e0e4eb;
+  background-color: #565657;
   border-top: 1.4px solid var(--cor-primaria-escura);
   border-left: 1.4px solid var(--cor-primaria-escura);
-  color: var(--cor-texto);
+  color: var(--cor-borda);
 }
 
 /* Main */

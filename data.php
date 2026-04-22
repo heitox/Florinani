@@ -15,7 +15,7 @@ $materiais_base = [
         'estoque' => 100,
         'categoria' => 'bruto',
         'descricao_curta' => 'Cimento Florinani 50kg.',
-        'descricao' => 'O Cimento Todas as Obras 50kg Votoran é um produto de alta qualidade e versatilidade, adequado para diversas aplicações na construção civil. Pertencente à classe de cimentos comuns, ele é um tipo de cimento Portland utilizado em diversas etapas da construção.',
+        'descricao' => 'O Cimento Florinani 50kg Votoran é um produto de alta qualidade e versatilidade, adequado para diversas aplicações na construção civil. Pertencente à classe de cimentos comuns, ele é um tipo de cimento Portland utilizado em diversas etapas da construção.',
         'imagem' => 'IMG/Cimento-florinani.png',
     ],
     [
