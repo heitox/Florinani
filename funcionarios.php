@@ -146,5 +146,10 @@ if (isset($_GET['menos'])) {
                 </tbody>
             </table>
         </section>
+     </main>
+
+    <?php 
+    require_once 'partials/footer.php';
+    ?>
 </body>
 </html>

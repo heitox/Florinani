@@ -16,6 +16,9 @@ require_once 'init.php';
 
   <main class="site-main">
     <section class="hero" aria-labelledby="titulo-hero">
+      <div class="imagem">
+        <img src="IMG/Florinani2.png" alt="">
+      </div>
       <h1 id="titulo-hero">Bem-vindo à ConstruTech</h1>
       <p>Vendemos materiais de construção de qualidade.</p>
     </section>
@@ -66,21 +69,7 @@ require_once 'init.php';
     
 
   </main>
-    <section aria-labelledby="titulo-contato" class="contato">
-      <h2 id="titulo-contato" class="secao-titulo">Fale conosco</h2>
-      <form class="formulario" action="processa-contato.php" method="get">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </section>
 
   <?php 
   require_once 'partials/footer.php';
