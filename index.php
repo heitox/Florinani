@@ -20,11 +20,11 @@ require_once 'init.php';
         <img src="IMG/Florinani2.png" alt="">
       </div>
       <h1 id="titulo-hero">Bem-vindo à ConstruTech</h1>
-      <p>Vendemos materiais de construção de qualidade.</p>
+      <p><i>Mais que materiais, entregamos confiança para sua obra.</i></p>
     </section>
 
     <section aria-labelledby="titulo-mais-vendidos">
-      <h2 id="titulo-mais-vendidos" class="secao-titulo">Materiais mais vendidos</h2>
+      <h2 id="titulo-mais-vendidos" class="secao-titulo">Materiais mais Vendidos</h2>
       <div class="cards-grid">
         <article class="card">
           <img class="card__img" src="IMG/Cimento-florinani.png" alt="">

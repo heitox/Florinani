@@ -21,7 +21,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
   ?>
 
   <main class="site-main">
-    <h1 class="secao-titulo">Catálogo de materiais</h1>
+    <h1 class="secao-titulo">Catálogo de Materiais</h1>
  
     <?php
       echo '<nav class="filtros-categoria" aria-label="Categorias">';
@@ -41,6 +41,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
         <div class="card__body">
           <h3>'.$materiais['nome'].'</h3>
           <p class="card__categoria">'.$materiais['categoria'].'</p>
+          <p class="card__descricao_curta">'.$materiais['descricao_curta'].'</p>
           <p class="card__preco"> R$ '.$materiais['preco'].'</p>
         </div>
       </article>';

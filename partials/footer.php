@@ -1,6 +1,6 @@
 <footer class="site-footer">
     <div class="site-footer__inner">
-      <small>&copy; 2026 ConstruTech - Loja de materiais de construção </small>
+      <small>&copy; 2026 ConstruTech - Mais que materiais, entregamos confiança para sua obra. </small>
       <nav aria-label="Rodapé">
         <a href="materiais.php">Materiais</a>
         ·
