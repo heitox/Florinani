@@ -116,7 +116,9 @@ if (isset($_GET['menos'])) {
 
                         <td>
                             <a href="funcionarios.php?editar=<?php echo $material['id']; ?>">
-                                <button class="btn-editar">Editar</button>
+                                <a href="editar-materiais.php?id=1">
+                                    <button class="btn-editar">Editar</button>
+                                </a>
                             </a>
                         </td>
 

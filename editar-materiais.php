@@ -24,7 +24,7 @@ $_SESSION['materiais'][] = [
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastrar Material - <?php print $nomeLoja; ?></title>
+  <title>Editar Material - <?php print $nomeLoja; ?></title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -33,7 +33,7 @@ $_SESSION['materiais'][] = [
   ?>
 
   <main class="site-main">
-    <h1 class="secao-titulo">Cadastrar Material</h1>
+    <h1 class="secao-titulo">Editar Material</h1>
 
     <form class="formulario" action="cadastro-materiais.php" method="post">
       <label for="nome">Nome do Material</label>
@@ -61,7 +61,7 @@ $_SESSION['materiais'][] = [
       <label for="imagem">Caminho ou URL da imagem</label>
       <input type="text" id="imagem" name="imagem" placeholder="https://... ou C:\pasta\imagem.jpg" required>
 
-      <button type="submit" class="btn">Cadastrar</button>
+      <button type="submit" class="btn">Salvar</button>
     </form>
   </main>
 

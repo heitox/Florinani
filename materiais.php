@@ -41,7 +41,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
         <div class="card__body">
           <h3>'.$materiais['nome'].'</h3>
           <p class="card__categoria">'.$materiais['categoria'].'</p>
-          <p class="card__descricao_curta">'.$materiais['descricao_curta'].'</p>
+          <p class="card__descricao">'.$materiais['descricao'].'</p>
           <p class="card__preco"> R$ '.$materiais['preco'].'</p>
         </div>
       </article>';
